@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [test]">
+  <test thread-count="5" name="Swag_Laps(failed)">
+    <classes>
+      <class name="Test_Cases.Cart">
+        <methods>
+          <include name="Close_Browser"/>
+          <include name="Checkout_With_Empty_Cart" invocation-numbers="0"/>
+          <include name="Open_Browser"/>
+        </methods>
+      </class> <!-- Test_Cases.Cart -->
+    </classes>
+  </test> <!-- Swag_Laps(failed) -->
+</suite> <!-- Failed suite [test] -->
