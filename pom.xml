@@ -58,11 +58,14 @@
             <version>1.5.4</version>
         </dependency>
 
+<<<<<<< HEAD
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.0.2</version>
         </dependency>
+=======
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
 
     </dependencies>
 

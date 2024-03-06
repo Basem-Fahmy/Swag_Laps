@@ -5,6 +5,11 @@
         <classes>
             <class name="Test_Cases.Login"/>
             <class name="Test_Cases.Cart"/>
+<<<<<<< HEAD
+=======
+            <class name="Test_Cases.Logout"/>
+            <class name="Test_Cases.About_us"/>
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
         </classes>
     </test>
 </suite>

@@ -6,12 +6,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+<<<<<<< HEAD
+=======
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
 import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+<<<<<<< HEAD
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
@@ -25,24 +31,38 @@ public class Cart extends Base_Class {
     ExtentReports extent = new ExtentReports();
     ExtentSparkReporter spark = new ExtentSparkReporter("Reports/Cart_Report.html");// Report location
     //Extent Report config
+=======
+
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+
+public class Cart extends Base_Class {
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
 
     WebDriver driver = new ChromeDriver();
     @BeforeClass
      public void Open_Browser(){
         WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
+<<<<<<< HEAD
 
         // config extent report
         spark.config().setTheme(Theme.DARK);
         spark.config().setDocumentTitle("Cart_Report");
         extent.attachReporter(spark);
         // config extent report
+=======
+        driver.navigate().to("https://www.saucedemo.com/");  // open website
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
     }
 
     @Test(dataProvider ="test_data" , priority=0)
     public void Add_Product_To_Cart
             (String User_Name,String Password, String Wrong_Username
             ,String Wrong_Password,String Info_First_Name, String Info_Last_name,String Zip_Code) {
+<<<<<<< HEAD
 
         // config extent report
         ExtentTest test = extent.createTest("Add_Product_To_Cart");
@@ -57,6 +77,8 @@ public class Cart extends Base_Class {
         test.pass("test is passed");
         // config extent report
 
+=======
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
         driver.get("https://www.saucedemo.com/");  // open website
         driver.findElement(Username_Input).sendKeys(User_Name); //enter username
         driver.findElement(Password_Input).sendKeys(Password);   //enter password
@@ -76,6 +98,7 @@ public class Cart extends Base_Class {
     public void Checkout_Test
             (String User_Name,String Password, String Wrong_Username
                     ,String Wrong_Password,String First_Name, String Last_Name,String Zip_Code) throws InterruptedException {
+<<<<<<< HEAD
 
         // config extent report
         ExtentTest test = extent.createTest("Checkout_Test");
@@ -92,6 +115,8 @@ public class Cart extends Base_Class {
         test.pass("test is passed");
         // config extent report
 
+=======
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
         driver.get("https://www.saucedemo.com/");  // open website
         driver.findElement(Username_Input).sendKeys(User_Name); //enter username
         driver.findElement(Password_Input).sendKeys(Password);   //enter password
@@ -117,6 +142,7 @@ public class Cart extends Base_Class {
     public void Checkout_With_Empty_Cart
             (String User_Name,String Password, String Wrong_Username
                     ,String Wrong_Password,String First_Name, String Last_Name,String Zip_Code) throws IOException {
+<<<<<<< HEAD
 
         // config extent report
         ExtentTest test = extent.createTest("Checkout_With_Empty_Cart");
@@ -132,6 +158,8 @@ public class Cart extends Base_Class {
         test.fail("test is failed");
         // config extent report
 
+=======
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
         driver.get("https://www.saucedemo.com/");  // open website
         driver.findElement(Username_Input).sendKeys(User_Name); //enter username
         driver.findElement(Password_Input).sendKeys(Password);   //enter password
@@ -163,6 +191,7 @@ public class Cart extends Base_Class {
     public void Remove_Product_From_Cart
             (String User_Name,String Password, String Wrong_Username
             ,String Wrong_Password,String Info_First_Name, String Info_Last_name,String Zip_Code) {
+<<<<<<< HEAD
 
         // config extent report
         ExtentTest test = extent.createTest("Remove_Product_From_Cart");
@@ -178,6 +207,8 @@ public class Cart extends Base_Class {
         test.pass("test is passed");
         // config extent report
 
+=======
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
         driver.get("https://www.saucedemo.com/");  // open website
         driver.findElement(Username_Input).sendKeys(User_Name); //enter username
         driver.findElement(Password_Input).sendKeys(Password);   //enter password
@@ -193,6 +224,7 @@ public class Cart extends Base_Class {
      public void Back_To_home_Page
             (String User_Name,String Password, String Wrong_Username
             ,String Wrong_Password,String Info_First_Name, String Info_Last_name,String Zip_Code){
+<<<<<<< HEAD
 
         // config extent report
         ExtentTest test = extent.createTest("Back_To_home_Page");
@@ -206,6 +238,8 @@ public class Cart extends Base_Class {
         test.pass("test is passed");
         // config extent report
 
+=======
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
         driver.get("https://www.saucedemo.com/");  // open website
         driver.findElement(Username_Input).sendKeys(User_Name); //enter username
         driver.findElement(Password_Input).sendKeys(Password);   //enter password
@@ -222,7 +256,10 @@ public class Cart extends Base_Class {
 
     @AfterTest
     public void Close_Browser(){
+<<<<<<< HEAD
         extent.flush(); // will erase all data on the report
+=======
+>>>>>>> 7ca1d5462ce028d547604ee6dfd3f1134612c8f0
         driver.quit();
     }
 
